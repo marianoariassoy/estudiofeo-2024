@@ -1,0 +1,7 @@
+.mainmenu {
+  top: -100vh;
+}
+.mainmenu.active {
+  top: 0;
+  transition: all 0.4s ease;
+}
