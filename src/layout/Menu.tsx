@@ -1,23 +1,52 @@
-import { Link } from 'wouter'
+import { Link, useLocation } from 'wouter'
 import { useDataContext } from '../context/useDataContext'
-import { mainmenu } from '../data/data'
+import { mainmenu, menu } from '../data/data'
 
 const MenuPages = () => {
   const { lan } = useDataContext()
+  const [location] = useLocation()
 
   return (
-    <div className='mainmenu fixed top-0 left-0 px-6 lg:px-12 w-full h-screen z-40 bg-white/50 backdrop-blur'>
-      <nav className='flex items-center h-full'>
-        <ul className='text-5xl lg:text-8xl font-extrabold uppercase'>
-          {mainmenu.map((item, index) => (
-            <li key={index}>
-              <Link to={item.url}>
-                <a className='hover:line-through'>{item[lan].title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <div className='mainmenu fixed top-0 left-0 w-full h-screen z-40 bg-white/50 backdrop-blur flex px-6 lg:px-12'>
+      <div className='lg:w-1/5'></div>
+      <div className='w-full lg:w-4/5'>
+        <nav className='flex flex-col justify-center h-full'>
+          <ul className='text-6xl lg:text-9xl font-extrabold uppercase border-b pb-3 mb-3 border-black lg:hidden'>
+            {menu.map((item, index) => (
+              <li key={index}>
+                <Link to={item.url}>
+                  <a
+                    className={`${
+                      location.slice(0, 8) === item.url.slice(0, 8)
+                        ? 'blur-sm'
+                        : ''
+                    }`}
+                  >
+                    {item[lan].title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className='text-6xl lg:text-9xl font-extrabold uppercase'>
+            {mainmenu.map((item, index) => (
+              <li key={index}>
+                <Link to={item.url}>
+                  <a
+                    className={`lg:blur-sm hover:blur-0 ${
+                      location.slice(0, 8) === item.url.slice(0, 8)
+                        ? 'blur-sm'
+                        : ''
+                    }`}
+                  >
+                    {item[lan].title}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }

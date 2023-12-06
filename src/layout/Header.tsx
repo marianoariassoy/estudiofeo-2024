@@ -6,23 +6,24 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <div className='w-full flex justify-between items-center gap-x-6'>
-      <div>
+    <section className='flex px-6 lg:px-12 bg-white/50 backdrop-blur-md pb-6 mb-10'>
+      <div className='w-1/5 pt-6'>
         <Link href='/'>
-          <a
-            aria-label='Go to home page'
-            className='hover:blur-sm'
-          >
+          <a className='hover:blur-sm inline-block'>
             <Logo />
           </a>
         </Link>
       </div>
-      <div className='flex items-center gap-x-6'>
-        <Nav />
-        <Languages />
-        <Bars />
+      <div className='flex justify-between items-start w-4/5'>
+        <div>
+          <Nav />
+        </div>
+        <div className='flex items-center gap-x-6 pt-6'>
+          <Languages />
+          <Bars />
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -6,7 +6,7 @@ const Menu = () => {
 
   return (
     <div
-      className='nav-menu'
+      className='nav-menu hover:opacity-60'
       onClick={OpenMenu}
     >
       <span></span>

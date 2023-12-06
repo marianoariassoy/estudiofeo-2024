@@ -1,7 +1,7 @@
 const Sponsors = () => {
   return (
-    <section className='bg-black p-12 mb-12 text-white'>
-      <div className='m-auto w-full max-w-5xl flex flex-col gap-y-12'>
+    <section className='bg-black px-6 py-24 mb-12 text-white'>
+      <div className='m-auto w-full max-w-5xl flex flex-col gap-y-16'>
         <div className='grid grid-cols-3 justify-center gap-x-44'>
           <div className='flex justify-center'>MAIN</div>
           <div className='flex justify-center'>MAIN</div>

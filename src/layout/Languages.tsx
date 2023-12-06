@@ -10,7 +10,7 @@ const Languages = () => {
   return (
     <button
       onClick={changeLanguage}
-      className='cursor-pointer font-bold hover:line-through'
+      className='cursor-pointer font-bold hover:opacity-60'
     >
       {lan === 'ES' ? 'EN' : 'ES'}
     </button>

@@ -18,7 +18,6 @@ const ImageComponent = ({ src, alt }) => {
     </div>
   ) : (
     <img
-      loading='lazy'
       src={src}
       alt={alt}
       className='fade-in h-full w-full object-cover object-center'

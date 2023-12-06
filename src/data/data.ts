@@ -13,7 +13,7 @@ export const menu = [
       title: 'Proyectos',
     },
     EN: {
-      title: 'Proyects',
+      title: 'Projects',
     },
     url: '/projects',
   },

@@ -1,36 +1,5 @@
 .fade-in {
-  animation: fadeIn ease 0.3s;
-}
-
-.fade-in-delay {
-  animation: fadeIn 1s ease 0.6s both;
-}
-
-.fade-in-blur {
-  animation: reveal 1s ease 0.3s both;
-}
-
-.reveal-on-scroll {
-  animation: reveal linear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30%;
-}
-
-.reveal-on-scroll-opacity {
-  animation: fadeIn linear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 25%;
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-  }
+  animation: fadeIn ease 0.5s forwards;
 }
 
 @keyframes fadeIn {

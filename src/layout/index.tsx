@@ -6,7 +6,7 @@ import Sponsors from './Sponsors'
 const Layout = ({ children }) => {
   return (
     <>
-      <header className='sticky z-50 bg-white/50 backdrop-blur px-6 lg:px-12 py-12'>
+      <header className='sticky top-0 z-50'>
         <Header />
       </header>
       <main>{children}</main>
