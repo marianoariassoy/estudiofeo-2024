@@ -7,6 +7,9 @@ import Shop from './pages/shop'
 import Galerie from './pages/galerie'
 import Error from './pages/error'
 import Details from './components/Details'
+import About from './pages/about'
+import Contact from './pages/contact'
+import Feohouse from './pages/feohouse'
 
 function App() {
   return (
@@ -34,6 +37,18 @@ function App() {
       <Route
         path='/galerie'
         component={Galerie}
+      />
+      <Route
+        path='/about'
+        component={About}
+      />
+      <Route
+        path='/contact'
+        component={Contact}
+      />
+      <Route
+        path='/feohouse'
+        component={Feohouse}
       />
       <Route
         path='/work/:id/:slug'

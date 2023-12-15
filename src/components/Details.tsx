@@ -4,7 +4,9 @@ import { HeadProvider, Title } from 'react-head'
 const Details = () => {
   return (
     <Layout>
-      <section className='m-auto max-w-7xl px-6 lg:px-12 pb-12'>
+      <div className='text-3xl text-center font-bold'>SOON</div>
+
+      {/* <section className='m-auto max-w-7xl px-6 lg:px-12 pb-12'>
         <h1 className='text-9xl font-extrabold'>THE FAT RONAL</h1>
         <h2 className='text-6xl mb-3 font-bold'>CHARACTER</h2>
         <p className='text-wrap w-3/4 lg:w-full max-w-4xl lg:pr-3'>
@@ -36,8 +38,7 @@ const Details = () => {
           necessitatibus molestiae totam, tempora maiores perferendis explicabo
           et dolores minima. Eaque error fuga tempora saepe sapiente adipisci.
         </p>
-      </section>
-
+      </section> */}
       <HeadProvider>
         <Title>FEO</Title>
       </HeadProvider>

@@ -17,7 +17,7 @@ const MenuPages = () => {
                 <Link to={item.url}>
                   <a
                     className={`${
-                      location.slice(0, 8) === item.url.slice(0, 8)
+                      location.slice(0, 4) === item.url.slice(0, 4)
                         ? 'blur-sm'
                         : ''
                     }`}
@@ -33,10 +33,10 @@ const MenuPages = () => {
               <li key={index}>
                 <Link to={item.url}>
                   <a
-                    className={`lg:blur-sm hover:blur-0 ${
-                      location.slice(0, 8) === item.url.slice(0, 8)
-                        ? 'blur-sm'
-                        : ''
+                    className={`${
+                      location.slice(0, 4) === item.url.slice(0, 4)
+                        ? 'blur-0'
+                        : 'blur-sm hover:blur-0'
                     }`}
                   >
                     {item[lan].title}

@@ -7,7 +7,7 @@ const index = () => {
       <section className='flex px-6 lg:px-12 pb-12'>
         <div className='w-1/5'></div>
         <div className='w-4/5 max-w-4xl pl-6'>
-          <h1 className='text-9xl mb-3 font-extrabold'>ERROR</h1>
+          <h1 className='text-9xl mb-3 font-bold'>ERROR</h1>
         </div>
       </section>
 
