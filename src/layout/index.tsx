@@ -1,7 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import Menu from './Menu'
-import Sponsors from './Sponsors'
+// import Sponsors from './Sponsors'
 
 const Layout = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        <Sponsors />
+        {/* <Sponsors /> */}
         <Footer />
       </footer>
       <Menu />

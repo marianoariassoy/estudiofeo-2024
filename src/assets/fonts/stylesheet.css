@@ -6,29 +6,29 @@
   src: url('Standerd-Bold.woff2') format('woff2');
 }
 
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Standerd Light';
   font-style: normal;
   font-weight: 300;
   src: url('Standerd-Light.woff2') format('woff2');
-}
+} */
 
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Standerd ExtraBold';
   font-style: normal;
   font-weight: bold;
   src: url('Standerd-ExtraBold.woff2') format('woff2');
-}
+} */
 
-@font-face {
+/* @font-face {
   font-display: swap;
   font-family: 'Standerd Medium';
   font-style: normal;
   font-weight: 500;
   src: url('Standerd-Medium.woff2') format('woff2');
-}
+} */
 
 @font-face {
   font-display: swap;

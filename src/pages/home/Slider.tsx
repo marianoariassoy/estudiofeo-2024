@@ -1,9 +1,9 @@
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
-// import Image from '../../components/Image'
+import Image from '../../components/Image'
 import { Back, Forward } from '../../icons/icons'
 
-const Slider = () => {
+const Slider = ({ data }) => {
   const sliderProperties = {
     autoplay: true,
     transitionDuration: 250,
@@ -26,14 +26,17 @@ const Slider = () => {
   return (
     <section>
       <Slide {...sliderProperties}>
-        <img
-          src='https://estudiofeo.com/backend/images/bg-home.jpg'
-          className='fade-in h-full w-full object-cover object-center aspect-square lg:aspect-video'
-        />
-        <img
-          src='https://estudiofeo.com/backend/images/bg-home.jpg'
-          className='fade-in h-full w-full object-cover object-center aspect-square lg:aspect-video'
-        />
+        {data.map((item) => (
+          <div
+            key={item.id}
+            className='aspect-square lg:aspect-video w-full'
+          >
+            <Image
+              src={item.image}
+              alt={item.alt}
+            />
+          </div>
+        ))}
       </Slide>
     </section>
   )

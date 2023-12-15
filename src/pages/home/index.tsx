@@ -1,28 +1,33 @@
+import { HeadProvider, Title } from 'react-head'
 import Layout from '../../layout/'
 import Slider from './Slider'
-import { HeadProvider, Title } from 'react-head'
+import { useDataContext } from '../../context/useDataContext'
+import UseFetch from '../../hooks/useFetch'
 
-const index = () => {
+const Index = () => {
+  const { lan } = useDataContext()
+  const { data, loading } = UseFetch(`/home`)
+  const { data: presentaciones, loading: loadingPresentaciones } = UseFetch(
+    `/presentaciones/${lan}`,
+  )
+
   return (
     <Layout>
       <section className='lg:flex px-6 lg:px-12 pb-12'>
         <div className='w-1/5'></div>
-        <div className='lg:w-4/5'>
-          <h1 className='text-9xl mb-3 font-extrabold'>WE ARE FEO</h1>
-          <p className='text-wrap lg:max-w-4xl'>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor est
-            deleniti consectetur sit, necessitatibus molestiae totam, tempora
-            maiores perferendis explicabo et dolores minima. Eaque error fuga
-            tempora saepe sapiente adipisci. Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Dolor est deleniti consectetur sit,
-            necessitatibus molestiae totam, tempora maiores perferendis
-            explicabo et dolores minima. Eaque error fuga tempora saepe sapiente
-            adipisci.
-          </p>
-        </div>
+        {!loadingPresentaciones && (
+          <div className='lg:w-4/5'>
+            <h1 className='text-9xl mb-3 font-extrabold uppercase'>
+              {presentaciones[0].title}
+            </h1>
+            <p className='text-wrap lg:w-full max-w-4xl lg:pr-3'>
+              {presentaciones[0].text}
+            </p>
+          </div>
+        )}
       </section>
 
-      <Slider />
+      {!loading && <Slider data={data} />}
 
       <HeadProvider>
         <Title>FEO</Title>
@@ -31,4 +36,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

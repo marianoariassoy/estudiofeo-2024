@@ -1,0 +1,24 @@
+/* @font-face {
+    font-family: 'BT Brik';
+    src: url('BTBrikRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+} */
+
+@font-face {
+  font-family: 'BT Brik XL';
+  src: url('BTBrikXL.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+    font-family: 'BT Brik XXL';
+    src: url('BTBrikXXL.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+ */

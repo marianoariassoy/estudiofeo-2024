@@ -6,6 +6,7 @@ import Art from './pages/art'
 import Shop from './pages/shop'
 import Galerie from './pages/galerie'
 import Error from './pages/error'
+import Details from './components/Details'
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
       <Route
         path='/galerie'
         component={Galerie}
+      />
+      <Route
+        path='/work/:id/:slug'
+        component={Details}
       />
       <Route component={Error} />
     </Switch>

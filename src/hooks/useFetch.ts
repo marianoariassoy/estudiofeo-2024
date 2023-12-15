@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react";
-const apiUrl = "https://estudiofeo.com/backend/api";
-import axios from "axios";
+import { useState, useEffect } from 'react'
+const apiUrl = 'https://estudiofeo.com/backendnew/api'
+import axios from 'axios'
 
-function useFetch(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function UseFetch(url) {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     async function fetchData() {
       try {
-        setLoading(true);
-        setData(null);
-        const urlOk = apiUrl + url;
-        const response = await axios.get(urlOk);
-        const json = await response.data;
-        setData(json);
+        setLoading(true)
+        setData(null)
+        const urlOk = apiUrl + url
+        const response = await axios.get(urlOk)
+        const json = await response.data
+        setData(json)
       } catch (error) {
-        setError(error);
+        setError(error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
-    fetchData();
-  }, [url]);
+    fetchData()
+  }, [url])
 
-  return { data, loading, error };
+  return { data, loading, error }
 }
 
-export default useFetch;
+export default UseFetch
