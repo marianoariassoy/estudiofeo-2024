@@ -86,7 +86,7 @@ const Form = () => {
             {sending ? (
               <BeatLoader />
             ) : (
-              <button className='bg-black w-full text-white h-11 font-bold hover:bg-[#333]'>
+              <button className='bg-black w-full text-white h-11 font-bold hover:bg-black/80'>
                 {contact[lan].send}
               </button>
             )}

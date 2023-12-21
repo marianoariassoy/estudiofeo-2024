@@ -2,6 +2,7 @@ html,
 body {
   accent-color: #fff;
   color: $text-color-primary;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 980px) {
@@ -23,11 +24,11 @@ a {
 }
 
 .font-bold {
-  font-family: 'Standerd Bold';
+  font-family: 'BT Brik XL';
 }
 
 .font-extrabold {
-  font-family: 'BT Brik XL';
+  font-family: 'BT Brik XXL';
 }
 
 svg {

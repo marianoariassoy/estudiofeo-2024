@@ -1,44 +1,84 @@
-import Layout from '../layout/'
 import { HeadProvider, Title } from 'react-head'
+import { useParams } from 'wouter'
+import ReactPlayer from 'react-player'
+import Layout from '../layout/'
+import Image from './Image'
+import useFetch from '../hooks/useFetch'
+import { useDataContext } from '../context/useDataContext'
+import Loader from '../components/Loader'
 
 const Details = () => {
+  const { lan } = useDataContext()
+  const { id } = useParams()
+  const { data, loading } = useFetch(`/post/${lan}/${id}`)
+  console.log(data)
+  const { data: dataImages, loading: loadingImages } = useFetch(
+    `/images/${id}/${lan}`,
+  )
+
   return (
     <Layout>
-      <div className='text-3xl text-center font-bold'>SOON</div>
-
-      {/* <section className='m-auto max-w-7xl px-6 lg:px-12 pb-12'>
-        <h1 className='text-9xl font-extrabold'>THE FAT RONAL</h1>
-        <h2 className='text-6xl mb-3 font-bold'>CHARACTER</h2>
-        <p className='text-wrap w-3/4 lg:w-full max-w-4xl lg:pr-3'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor est
-          deleniti consectetur sit, necessitatibus molestiae totam, tempora
-          maiores perferendis explicabo et dolores minima. Eaque error fuga
-          tempora saepe sapiente adipisci. Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Dolor est deleniti consectetur sit,
-          necessitatibus molestiae totam, tempora maiores perferendis explicabo
-          et dolores minima. Eaque error fuga tempora saepe sapiente adipisci.
-        </p>
+      <section className='m-auto max-w-7xl px-6 lg:px-12 pb-28'>
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <h1 className='text-4xl lg:text-8xl font-bold'>{data[0].title}</h1>
+            {data[0].subtitle && (
+              <h2 className='text-4xl lg:text-6xl font-bold mb-3'>
+                {data[0].subtitle}
+              </h2>
+            )}
+          </>
+        )}
       </section>
 
-      <section>
-        <img
-          src='https://estudiofeo.com/backend/images/bg-home.jpg'
-          className='fade-in w-full'
-        />
+      {!loading && data[0].video && (
+        <section className='w-full mb-28'>
+          <ReactPlayer
+            url={data[0].video}
+            playing={true}
+            controls={true}
+            width='100%'
+            height='100%'
+            className='aspect-video object-cover'
+          />
+        </section>
+      )}
+
+      <section className='flex flex-col'>
+        {loadingImages ? (
+          <Loader />
+        ) : (
+          dataImages.map((item) => (
+            <article key={item.id}>
+              <Image
+                src={item.image}
+                alt={item.title}
+              />
+              {item.text && (
+                <div className='py-12 whitespace-pre px-6 lg:px-12'>
+                  {item.text}
+                </div>
+              )}
+            </article>
+          ))
+        )}
       </section>
 
-      <section className='m-auto max-w-7xl px-6 lg:px-12 py-12'>
-        <h3 className='text-3xl font-bold mb-3'>Lorem, ipsum dolor sit amet</h3>
-        <p className='text-wrap w-3/4 lg:w-full max-w-4xl lg:pr-3'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor est
-          deleniti consectetur sit, necessitatibus molestiae totam, tempora
-          maiores perferendis explicabo et dolores minima. Eaque error fuga
-          tempora saepe sapiente adipisci. Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Dolor est deleniti consectetur sit,
-          necessitatibus molestiae totam, tempora maiores perferendis explicabo
-          et dolores minima. Eaque error fuga tempora saepe sapiente adipisci.
-        </p>
-      </section> */}
+      {!loading && data[0].link && (
+        <div className='my-12 px-6 lg:px-12'>
+          <a
+            href={data[0].link}
+            target='_blank'
+            rel='noreferrer'
+            className='bg-black rounded-full px-6 py-3 inline-flex text-white hover:bg-black/80'
+          >
+            {lan === 'ES' ? 'Ir al link' : 'View Link'}
+          </a>
+        </div>
+      )}
+
       <HeadProvider>
         <Title>FEO</Title>
       </HeadProvider>

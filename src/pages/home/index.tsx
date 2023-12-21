@@ -13,14 +13,14 @@ const Index = () => {
 
   return (
     <Layout>
-      <section className='lg:flex px-6 lg:px-12 pb-12'>
+      <section className='lg:flex px-6 lg:px-12 pb-28'>
         <div className='w-1/5'></div>
         {!loadingPresentaciones && (
           <div className='lg:w-4/5'>
-            <h1 className='text-9xl mb-3 font-extrabold uppercase'>
+            <h1 className='text-9xl font-bold uppercase -mb-6'>
               {presentaciones[0].title}
             </h1>
-            <p className='text-wrap lg:w-full max-w-4xl lg:pr-3'>
+            <p className='text-justify w-full leading-5 pr-24'>
               {presentaciones[0].text}
             </p>
           </div>

@@ -6,7 +6,7 @@ import Nav from './Nav'
 
 const Header = () => {
   return (
-    <section className='flex px-6 lg:px-12 bg-white/50 backdrop-blur-md pb-6 mb-10'>
+    <section className='flex px-6 lg:px-12 bg-white/50 backdrop-blur-md pb-6 mb-12'>
       <div className='w-1/5 pt-6'>
         <Link href='/'>
           <a className='hover:blur-sm inline-block'>

@@ -11,7 +11,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <section className='flex flex-col gap-y-12 px-6 lg:px-12'>
+      <section className='flex flex-col'>
         {loading ? (
           <Loader />
         ) : (
@@ -22,7 +22,9 @@ const Index = () => {
                 alt={item.title}
               />
               {item.text && (
-                <div className='pt-10 whitespace-pre'>{item.text}</div>
+                <div className='py-12 whitespace-pre px-6 lg:px-12'>
+                  {item.text}
+                </div>
               )}
             </article>
           ))

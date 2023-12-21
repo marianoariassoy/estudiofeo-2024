@@ -3,7 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      sans: 'Standerd, sans-serif',
+      sans: 'BT Brik, sans-serif',
     },
   },
   plugins: [],

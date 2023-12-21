@@ -18,8 +18,8 @@ const MenuPages = () => {
                   <a
                     className={`${
                       location.slice(0, 4) === item.url.slice(0, 4)
-                        ? 'blur-sm'
-                        : ''
+                        ? ''
+                        : 'blur-sm'
                     }`}
                   >
                     {item[lan].title}
@@ -35,8 +35,8 @@ const MenuPages = () => {
                   <a
                     className={`${
                       location.slice(0, 4) === item.url.slice(0, 4)
-                        ? 'blur-0'
-                        : 'blur-sm hover:blur-0'
+                        ? 'blur-sm '
+                        : 'blur-0 hover:blur-sm'
                     }`}
                   >
                     {item[lan].title}
