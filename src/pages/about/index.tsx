@@ -22,7 +22,7 @@ const Index = () => {
                 alt={item.title}
               />
               {item.text && (
-                <div className='py-12 whitespace-pre px-6 lg:px-12'>
+                <div className='py-12 whitespace-break-spaces px-6 lg:px-12'>
                   {item.text}
                 </div>
               )}

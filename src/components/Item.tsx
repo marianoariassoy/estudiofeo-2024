@@ -4,7 +4,7 @@ import { sanitizeTitleForURL } from '../utils/utils'
 
 const Item = ({ data }) => {
   return (
-    <article className='relative w-full lg:min-h-[450px] min-h-[200px] bg-slate-300'>
+    <article className='relative w-full lg:min-h-[450px] bg-slate-300'>
       <Link href={`/work/${data.id}/${sanitizeTitleForURL(data.title)}`}>
         <button className='absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur z-10 cursor-pointer opacity-0 hover:opacity-100 transition-all'></button>
       </Link>
