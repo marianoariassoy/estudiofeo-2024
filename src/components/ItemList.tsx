@@ -15,7 +15,7 @@ const ItemList = ({ lan, location }) => {
           {index % 2 === 0 ? (
             <Item data={item} />
           ) : (
-            <div className='flex items-stretch'>
+            <div className='flex flex-col lg:flex-row items-stretch'>
               <Item data={item} />
               {index + 1 < data.length && <Item data={data[index + 1]} />}
             </div>

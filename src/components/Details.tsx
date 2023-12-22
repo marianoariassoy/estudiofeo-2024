@@ -80,7 +80,7 @@ const Details = () => {
       )}
 
       <HeadProvider>
-        <Title>FEO</Title>
+        <Title>{!loading ? data[0].title : 'FEO'}</Title>
       </HeadProvider>
     </Layout>
   )

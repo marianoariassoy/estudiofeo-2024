@@ -41,7 +41,7 @@ const HomeSection = ({ section }) => {
       <section className='lg:flex px-6 lg:px-12 pb-28 relative'>
         <div className='w-1/5'></div>
         <div className='lg:w-4/5'>
-          <h1 className='text-7xl lg:text-9xl font-bold uppercase -mb-6'>
+          <h1 className='text-7xl lg:text-9xl font-bold uppercase -mb-4 lg:-mb-6'>
             {title}
           </h1>
           <p className='text-justify w-full pr-24 leading-5'>{text}</p>
@@ -54,7 +54,7 @@ const HomeSection = ({ section }) => {
               : menu[0]['EN'].title.toLowerCase()
           }`}
         >
-          <button className='absolute right-4 lg:right-10 bottom-8 hover:blur-sm lg:text-xl'>
+          <button className='absolute right-4 lg:right-10 bottom-8 hover:text-black/50 lg:text-xl'>
             <Forward />
           </button>
         </Link>

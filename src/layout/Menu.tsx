@@ -11,7 +11,7 @@ const MenuPages = () => {
       <div className='lg:w-1/5'></div>
       <div className='w-full lg:w-4/5'>
         <nav className='flex flex-col justify-center h-full'>
-          <ul className='text-6xl lg:text-9xl font-extrabold uppercase border-b pb-3 mb-3 border-black lg:hidden'>
+          <ul className='text-5xl lg:text-9xl font-extrabold uppercase border-b pb-3 mb-3 border-black lg:hidden'>
             {menu.map((item, index) => (
               <li key={index}>
                 <Link to={item.url}>
@@ -28,7 +28,7 @@ const MenuPages = () => {
               </li>
             ))}
           </ul>
-          <ul className='text-6xl lg:text-9xl font-extrabold uppercase'>
+          <ul className='text-5xl lg:text-9xl font-extrabold uppercase'>
             {mainmenu.map((item, index) => (
               <li key={index}>
                 <Link to={item.url}>
