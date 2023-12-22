@@ -122,7 +122,7 @@ const Index = () => {
 
         <div className='text-xl mb-12'>
           <h1 className='font-bold text-7xl mb-4'>
-            {lan === 'ES' ? 'galería' : 'gallerie'}
+            {lan === 'ES' ? 'galería' : 'gallery'}
           </h1>
           <div className='flex gap-3'>
             <a
