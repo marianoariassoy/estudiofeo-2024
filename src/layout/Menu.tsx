@@ -18,8 +18,8 @@ const MenuPages = () => {
                   <a
                     className={`${
                       location.slice(0, 4) === item.url.slice(0, 4)
-                        ? ''
-                        : 'blur-sm'
+                        ? 'blur-sm'
+                        : ''
                     }`}
                   >
                     {item[lan].title}

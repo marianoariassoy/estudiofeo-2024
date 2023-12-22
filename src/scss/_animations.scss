@@ -2,6 +2,21 @@
   animation: fadeIn ease 0.5s forwards;
 }
 
+.reveal-on-scroll {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: 30% 45%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
