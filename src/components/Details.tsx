@@ -10,22 +10,23 @@ import Loader from '../components/Loader'
 const Details = () => {
   const { lan } = useDataContext()
   const { id } = useParams()
+
   const { data, loading } = useFetch(`/post/${lan}/${id}`)
-  console.log(data)
+
   const { data: dataImages, loading: loadingImages } = useFetch(
     `/images/${id}/${lan}`,
   )
 
   return (
     <Layout>
-      <section className='m-auto max-w-7xl px-6 lg:px-12 pb-28'>
+      <section className='m-auto max-w-7xl px-6 lg:px-12 pb-20'>
         {loading ? (
           <Loader />
         ) : (
           <>
             <h1 className='text-4xl lg:text-8xl font-bold'>{data[0].title}</h1>
             {data[0].subtitle && (
-              <h2 className='text-4xl lg:text-6xl font-bold mb-3'>
+              <h2 className='text-xl lg:text-4xl font-bold mb-3'>
                 {data[0].subtitle}
               </h2>
             )}
@@ -57,7 +58,7 @@ const Details = () => {
                 alt={item.title}
               />
               {item.text && (
-                <div className='py-12 whitespace-pre px-6 lg:px-12'>
+                <div className='py-8 whitespace-break-spaces px-6 lg:px-12'>
                   {item.text}
                 </div>
               )}

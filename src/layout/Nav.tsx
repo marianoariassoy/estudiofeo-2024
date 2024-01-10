@@ -14,7 +14,7 @@ const MenuPages = () => {
             <Link href={item.url}>
               <a
                 className={`h-14 block pr-10 pt-[1.6rem] uppercase ${
-                  location.slice(0, 8) === item.url.slice(0, 8)
+                  location.slice(0, 3) === item.url.slice(0, 3)
                     ? 'bg-black text-white'
                     : 'hover:bg-black hover:text-white'
                 }`}

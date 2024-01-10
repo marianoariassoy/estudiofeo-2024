@@ -23,7 +23,7 @@ function App() {
         component={Projects}
       />
       <Route
-        path='/forniture'
+        path='/furniture'
         component={Forniture}
       />
       <Route
@@ -31,11 +31,11 @@ function App() {
         component={Art}
       />
       <Route
-        path='/shop'
+        path='/store'
         component={Shop}
       />
       <Route
-        path='/galerie'
+        path='/gallery'
         component={Galerie}
       />
       <Route
@@ -51,9 +51,30 @@ function App() {
         component={Feohouse}
       />
       <Route
-        path='/work/:id/:slug'
+        path='/projects/:id/:slug'
         component={Details}
       />
+      <Route
+        path='/furniture/:id/:slug'
+        component={Details}
+      />
+      <Route
+        path='/projects/:id/:slug'
+        component={Details}
+      />
+      <Route
+        path='/art/:id/:slug'
+        component={Details}
+      />
+      <Route
+        path='/store/:id/:slug'
+        component={Details}
+      />
+      <Route
+        path='/gallery/:id/:slug'
+        component={Details}
+      />
+
       <Route component={Error} />
     </Switch>
   )

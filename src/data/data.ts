@@ -22,9 +22,9 @@ export const menu = [
       title: 'Muebles',
     },
     EN: {
-      title: 'Forniture',
+      title: 'Furniture',
     },
-    url: '/forniture',
+    url: '/furniture',
   },
   {
     ES: {
@@ -40,18 +40,18 @@ export const menu = [
       title: 'Shop',
     },
     EN: {
-      title: 'Shop',
+      title: 'Store',
     },
-    url: '/shop',
+    url: '/store',
   },
   {
     ES: {
       title: 'Galería',
     },
     EN: {
-      title: 'Galerie',
+      title: 'Gallery',
     },
-    url: '/galerie',
+    url: '/gallery',
   },
 ]
 

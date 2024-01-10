@@ -19,16 +19,16 @@ const HomeSection = ({ section }) => {
   if (location === '/projects') {
     title = data[1].title
     text = data[1].text
-  } else if (location === '/forniture') {
+  } else if (location === '/furniture') {
     title = data[2].title
     text = data[2].text
   } else if (location === '/art') {
     title = data[3].title
     text = data[3].text
-  } else if (location === '/shop') {
+  } else if (location === '/store') {
     title = data[4].title
     text = data[4].text
-  } else if (location === '/galerie') {
+  } else if (location === '/gallery') {
     title = data[5].title
     text = data[5].text
   } else {
