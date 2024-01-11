@@ -44,7 +44,9 @@ const HomeSection = ({ section }) => {
           <h1 className='text-7xl lg:text-9xl font-bold uppercase -mb-3 lg:-mb-6'>
             {title}
           </h1>
-          <p className='text-justify w-full pr-24 leading-5'>{text}</p>
+          <p className='text-justify w-full pr-24 leading-5 whitespace-break-spaces'>
+            {text}
+          </p>
         </div>
 
         <Link

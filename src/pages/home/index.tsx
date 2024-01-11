@@ -20,7 +20,7 @@ const Index = () => {
             <h1 className='text-9xl font-bold uppercase -mb-6'>
               {presentaciones[0].title}
             </h1>
-            <p className='text-justify w-full leading-5 pr-24'>
+            <p className='text-justify w-full leading-5 pr-24 whitespace-break-spaces'>
               {presentaciones[0].text}
             </p>
           </div>
