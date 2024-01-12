@@ -37,7 +37,7 @@ export const menu = [
   },
   {
     ES: {
-      title: 'Shop',
+      title: 'Tienda',
     },
     EN: {
       title: 'Store',
