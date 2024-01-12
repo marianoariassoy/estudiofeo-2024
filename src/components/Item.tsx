@@ -6,7 +6,7 @@ const Item = ({ data }) => {
   const [location] = useLocation()
 
   return (
-    <article className='relative w-full min-h-[250px] lg:min-h-[450px]'>
+    <article className='relative'>
       <Link
         href={`${location}/${data.id}/${
           data.title ? sanitizeTitleForURL(data.title) : 'none'

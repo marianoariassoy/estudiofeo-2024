@@ -9,18 +9,12 @@ const ItemList = ({ lan, location }) => {
   }
 
   return (
-    <section className='flex flex-col'>
+    <section className='projects-grid'>
       {data.map((item, index) => (
-        <div key={index}>
-          {index % 2 === 0 ? (
-            <Item data={item} />
-          ) : (
-            <div className='flex flex-col lg:flex-row items-stretch'>
-              <Item data={item} />
-              {index + 1 < data.length && <Item data={data[index + 1]} />}
-            </div>
-          )}
-        </div>
+        <Item
+          data={item}
+          key={index}
+        />
       ))}
     </section>
   )
